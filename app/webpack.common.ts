@@ -115,7 +115,7 @@ export const cli = merge({}, commonConfig, {
   target: 'node',
   plugins: [
     new webpack.DefinePlugin(
-      Object.assign({}, replacements, {
+      Object.assign({}, safeReplacements, {
         __PROCESS_KIND__: JSON.stringify('cli'),
       })
     ),
